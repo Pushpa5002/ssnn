@@ -7,12 +7,11 @@ def binary_search(arr, low, high, x):
         mid=(high+low)//2
         if arr[mid] == x:
             return mid
-        elif arr[mid] < x:
-            return binary_search(arr, mid + 1, high, x)
+        elif arr[mid]
         else:
             return binary_search(arr, low, mid - 1, x)
     else:
-        return -1
+        r
 
 arr = np.arange(1, 10)
 x = 500
@@ -25,7 +24,6 @@ for n in range(10, len(arr) + 1, 10):
     search_times.append(end_time - start_time)
 
 plt.plot(search_times)
-plt.xlabel('Array size (n)')
 plt.ylabel('Time (s)')
 plt.title('Time complexity of binary search')
 plt.show()
